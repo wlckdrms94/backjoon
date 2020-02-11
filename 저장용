@@ -1,0 +1,181 @@
+//java 구구단
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        if(N > 0){
+            if (N <= 9) {
+                for (int i = 1; i <= 9; i++) {
+                    System.out.println(N + " * " + i + " = " + N * i);
+                }
+            }else {
+                System.out.print("구구단의 범위를 넘어갑니다.");
+            }
+        } else {
+            System.out.print("구구단의 범위보다 작습니다.");
+        }
+
+        sc.close();
+    }
+}
+
+//java n번째 자리수까지 더하기
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        int a = 0;
+        for (int i = 1 ; i <= N ; i++){
+            a = a + i;
+        }
+        System.out.println(a);
+
+        sc.close();
+    }
+}
+
+// N개 숫자 찍기
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        if(N <= 100000){
+            for(int i = 1; i <= N; i++) {
+                System.out.println(i);
+            }
+        } else{
+            System.out.print("범위를 벗어납니다.");
+        }
+        sc.close();
+    }
+}
+
+// 기찍 N
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        if(N <= 100000){
+            for(int i = N; i > 0; i--) {
+                System.out.println(i);
+            }
+        } else{
+            System.out.print("범위를 벗어납니다.");
+        }
+        sc.close();
+    }
+}
+
+// 별찍기 - 1
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        for(int i = N; i >= 1; i--) {
+            for(int b = N; b >= i; b--){
+                System.out.print("*");
+            }
+            if (i != 1){
+                System.out.println();
+            }
+        }
+        sc.close();
+    }
+}
+
+// 별찍기 - 2
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        for(int i = N; i >= 1; i--){
+            for(int k = i - 1; k >= 1; k--){
+                System.out.print(" ");
+            }
+            for(int j = i; j <= N; j++){
+                System.out.print("*");
+            }
+            if(i != 1){
+                System.out.println();
+            }
+        }
+        
+        sc.close();
+    }
+}
+
+//while - 1
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int i = 0;
+        while (i >= 0) {
+            i++;
+            int A = sc.nextInt();
+            int B = sc.nextInt();
+            if(A > 0){
+                if(B < 10){
+                    int C = A + B;
+                    System.out.println(C);
+                }
+            }else if(A == 0 && B == 0){
+                break;
+            }
+        }
+        
+        sc.close();
+    }
+}
+
+//while - 2
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        while (sc.hasNextInt()) {
+            int A = sc.nextInt();
+            int B = sc.nextInt();
+            if(A > 0){
+                if(B < 10){
+                    int C = A + B;
+                    System.out.println(C);
+                }
+            }
+        }
+        
+        sc.close();
+    }
+}
